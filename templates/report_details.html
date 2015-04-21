@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div id = "reports">
+<h3>  {{ r.subject }}  </h3>
+<p> {{ r.long_text }} </p>
+<p> {{ r.short_text }} </p>
+<a href = "{{ MEDIA_URL }}{{r.file.url}}"><p>file  </p></a>
+
+<a href="/reports/delete/{{r.id}}" ><p> delete</p></a>
+<a href="/reports/edit/{{r.id}}" ><p> edit</p></a>
+</div>
+
+
+{% endblock %}
+

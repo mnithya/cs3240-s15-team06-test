@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div id = "reports">
+
+
+
+
+<h3>{{full_name}}'s Reports list</h3>
+
+<form method="POST">
+
+{% csrf_token %}
+<select name="folder_select">
+<option value="-777" size="100" >-----------Folder------------</option>
+{% for f in fl %}
+<option type= " select" value="{{f.id}}" > {{ f.name}}</option>
+{% endfor %}
+</select> 
+{% for post in report_list %}
+<!--<a href ="/reports/?detail={{post.id}}" ><p>  {{ post.subject }}  </p> </a> --> 
+<span><p><input type="checkbox" value="{{post.id}}" name="check_box_list"/><a href ="/reports/detail/{{post.id}}"> {{ post.subject }} {{post.folder_id}}</a></p> <p>{{post.timestamp}}</p> </span>
+{% endfor %}
+
+
+
+<span><input type="submit" value="addfolder" name="button_list"  class="addfolder"/>
+<input type="submit" value="delete" name="button_list" class="delete"/>
+<a href = "/reports/new/"><input type="new_report"/ class="newReport"> </a>
+
+</span>
+
+
+
+
+</form>
+
+
+
+</div>
+{% endblock %}
+
