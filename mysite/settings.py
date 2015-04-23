@@ -88,10 +88,10 @@ DATABASES = {
 }
 
 # Parse database configuration from $DATABASE_URL
- DATABASES['default'] =  dj_database_url.config()
+DATABASES['default'] =  dj_database_url.config()
 
 # Enable Connection Pooling
- DATABASES['default']['ENGINE'] = 'django_postgrespool'
+DATABASES['default']['ENGINE'] = 'django_postgrespool'
 
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
