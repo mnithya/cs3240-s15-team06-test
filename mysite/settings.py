@@ -23,7 +23,7 @@ STATICFILES_DIRS = (
 )
 
 
-# Quick-start development settings - unsuitable for production
+# Quick-starlt development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -104,7 +104,7 @@ DATABASES['default']['ENGINE'] = 'django_postgrespool'
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'EST'
 
 USE_I18N = True
 
